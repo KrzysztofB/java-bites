@@ -6,7 +6,6 @@
     <groupId>com.bardzinski</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-	<groupId>com.bardzinski</groupId>
 	<artifactId>adventofcode</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -32,6 +31,7 @@
 	</build>
 
 	<dependencies>
+
 
 	</dependencies>
 </project>

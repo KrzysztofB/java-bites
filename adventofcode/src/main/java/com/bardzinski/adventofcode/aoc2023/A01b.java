@@ -1,14 +1,12 @@
 package com.bardzinski.adventofcode.aoc2023;
 
+import com.bardzinski.adventofcode.Task;
+
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 import java.util.stream.Stream;
-
-import com.bardzinski.adventofcode.Task;
 
 /* read text lines
  * take first and last DIGIT from each line
@@ -23,8 +21,8 @@ public class A01b implements Task {
     Map<String, Integer> digits = Map.<String, Integer>of("0", 0, "1", 1, "2", 2, "3", 3, "4", 4,
             "5", 5, "6", 6, "7", 7, "8", 8, "9", 9);
     Map<String, Integer> words = Map.of(
-            "zero",0, "one", 1, "two", 2, "three", 3, "four", 4,
-     "five", 5, "six", 6, "seven", 7, "eight", 8, "nine", 9);
+            "zero", 0, "one", 1, "two", 2, "three", 3, "four", 4,
+            "five", 5, "six", 6, "seven", 7, "eight", 8, "nine", 9);
     Map<String, Integer> items = combineDigitsAndWords();
 
     private Map<String, Integer> combineDigitsAndWords() {
@@ -50,8 +48,6 @@ public class A01b implements Task {
     }
 
     private int findNumber(String line) {
-        
-
 
 
         AtomicInteger first = new AtomicInteger(-1);
@@ -69,8 +65,8 @@ public class A01b implements Task {
                 .filter(Character::isDigit)
                 .forEach(useChar);
         //change character codes to digit values
-        first.addAndGet(-(int)'0');
-        last.addAndGet(-(int)'0');
+        first.addAndGet(-(int) '0');
+        last.addAndGet(-(int) '0');
 
         if (last.get() < 0) {
             return 10 * first.get() + first.get();
