@@ -104,6 +104,6 @@
   <modules>
       
     <module>adventofcode</module>
-      
+    <module>exercise</module>
   </modules>
 </project>
