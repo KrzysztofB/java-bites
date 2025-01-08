@@ -1,14 +1,11 @@
 package com.leetcode;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PalindromeNumberTest {
 
@@ -21,7 +18,7 @@ class PalindromeNumberTest {
 
 
     @ParameterizedTest
-    @CsvSource({"0", "9", "191", "98766789" })
+    @CsvSource({"0", "9", "191", "98766789"})
     void isPalindrome(int input) {
 
         //when
@@ -31,7 +28,7 @@ class PalindromeNumberTest {
     }
 
     @ParameterizedTest
-    @CsvSource({"23", "233", "1110", "-121" })
+    @CsvSource({"23", "233", "1110", "-121"})
     void notPalindrome(int input) {
 
         //when

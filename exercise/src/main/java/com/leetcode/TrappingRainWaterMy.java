@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 
 
 /**
- * @link https://leetcode.com/problems/trapping-rain-water/description/
+ * @see <a href="https://leetcode.com/problems/trapping-rain-water/description/">Traping Rain Water at Leetcode</a>
  */
 public class TrappingRainWaterMy implements TrappingRainWater {
     private static final Logger log = LoggerFactory.getLogger(TrappingRainWater.class);
