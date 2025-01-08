@@ -68,7 +68,7 @@ public class TrappingRainWaterMy implements TrappingRainWater {
 
     static class Trap {
 
-        private ArrayDeque<Peak> leftSidePeaks = new ArrayDeque<>();
+        private final ArrayDeque<Peak> leftSidePeaks = new ArrayDeque<>();
         private boolean hasValley = false;
 
         void descendOrFlat(int height, int x) {
