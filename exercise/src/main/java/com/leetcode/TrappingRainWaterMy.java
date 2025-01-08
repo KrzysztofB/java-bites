@@ -1,7 +1,7 @@
 package com.leetcode;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 
 import java.util.ArrayDeque;
 
@@ -10,11 +10,11 @@ import java.util.ArrayDeque;
  * @see <a href="https://leetcode.com/problems/trapping-rain-water/description/">Traping Rain Water at Leetcode</a>
  */
 public class TrappingRainWaterMy implements TrappingRainWater {
-    private static final Logger log = LoggerFactory.getLogger(TrappingRainWater.class);
+//    private static final Logger log = LoggerFactory.getLogger(TrappingRainWater.class);
 
     //    n == height.length
-//    1 <= n <= 2 * 10^4   (20_000)
-//    0 <= height[i] <= 10^5 (100_000)
+    //    1 <= n <= 2 * 10^4   (20_000)
+    //    0 <= height[i] <= 10^5 (100_000)
     public int trap(int[] height) {
         if (!validSize(height)) {
             throw new IllegalArgumentException("1 <= length <= 20_000");

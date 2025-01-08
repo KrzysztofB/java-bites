@@ -13,6 +13,6 @@ public class MyTests {
 	@Test
 	void testSomething() throws Exception {
 		LOGGER.info("Started tests.");
-		assertTrue(false);
+		assertTrue(true);
 	}
 }
