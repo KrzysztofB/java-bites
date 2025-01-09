@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ReverseIntegerTest {
 
-    private ReverseInteger rev = new ReverseInteger();
+    private final ReverseInteger rev = new ReverseInteger();
 
     @ParameterizedTest
     @CsvSource(value = {"123,321", "-123,-321", "120,21", "1534236469,0"})
@@ -16,7 +16,6 @@ class ReverseIntegerTest {
         int result = rev.reverse(input);
         //then
         assertThat(result).isEqualTo(expected);
-
     }
 
 }
