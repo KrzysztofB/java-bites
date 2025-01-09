@@ -1,7 +1,7 @@
 package com.leetcode;
 
 /**
- * @see <a href="https://leetcode.com/problems/palindrome-number/description/">Palindrome Number at Leetcode</a>
+ * @see <a href="https://leetcode.com/problems/palindrome-number/">Palindrome Number at Leetcode</a>
  */
 public class PalindromeNumber {
     public boolean isPalindrome(int x) {
