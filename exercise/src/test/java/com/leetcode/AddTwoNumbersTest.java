@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AddTwoNumbersTest {
 
@@ -24,7 +24,7 @@ class AddTwoNumbersTest {
         //when
         var result = adder.addTwoNumbers(l1, l2);
         //then
-        assertTrue(result.equals(expected));
+        assertEquals(expected, result);
     }
 
     @Test
@@ -36,7 +36,7 @@ class AddTwoNumbersTest {
         //when
         var result = adder.addTwoNumbers(l1, l2);
         //then
-        assertTrue(result.equals(expected));
+        assertEquals(expected, result);
     }
 
     @Test
@@ -44,11 +44,9 @@ class AddTwoNumbersTest {
         //given
         var l1 = ListNode.of(9, 9, 9, 9, 9, 9, 9);
         var l2 = ListNode.of(9, 9, 9, 9);
-        //var expected = ListNode.of(8,9,9,9,0,0,0,1);
         //when
         var result = adder.addTwoNumbers(l1, l2);
         //then
         assertThat(result.toList()).containsExactly(8, 9, 9, 9, 0, 0, 0, 1);
     }
-
 }
