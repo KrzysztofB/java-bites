@@ -1,11 +1,10 @@
 package com.bardzinski.adventofcode.aoc2023;
 
+import com.bardzinski.adventofcode.Task;
+
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
 import java.util.function.IntConsumer;
 import java.util.stream.Stream;
-
-import com.bardzinski.adventofcode.Task;
 
 /* read text lines
  * take first and last DIGIT from each line
@@ -47,8 +46,8 @@ public class A01a implements Task {
                 .filter(Character::isDigit)
                 .forEach(useChar);
         //change character codes to digit values
-        first.addAndGet(-(int)'0');
-        last.addAndGet(-(int)'0');
+        first.addAndGet(-(int) '0');
+        last.addAndGet(-(int) '0');
 
         if (last.get() < 0) {
             return 10 * first.get() + first.get();

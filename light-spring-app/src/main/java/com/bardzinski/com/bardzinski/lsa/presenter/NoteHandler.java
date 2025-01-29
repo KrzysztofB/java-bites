@@ -21,7 +21,7 @@ public class NoteHandler {
         this.noteRepository = noteRepository;
     }
 
-    public Mono<ServerResponse> all(ServerRequest request) {
+    public Mono<ServerResponse> all(ServerRequest _request) {
         Flux<Note> data = this.noteRepository.findAll();
         return ResponseMapper.collection(data, Note.class);
     }
@@ -33,7 +33,7 @@ public class NoteHandler {
             Long id = Long.valueOf(stringId);
             note = noteRepository.findById(id);
         } catch (NumberFormatException nex) {
-            logger.error("Invalid note ID = ", stringId);
+            logger.error("Invalid note ID = {}", stringId, nex);
         }
 
         return ResponseMapper.bodyOrNotFound(note);

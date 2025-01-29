@@ -7,6 +7,7 @@ import reactor.core.publisher.Mono;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Stream;
 
 //@Component
 public class NoteRepository {
@@ -15,11 +16,10 @@ public class NoteRepository {
         private static long ID_COUNTER = 1L;
 
         static {
-            Arrays.asList("First Post", "Second Post")
-                    .stream()
+            Stream.of("First Post", "Second Post")
                     .forEach((java.lang.String title) -> {
                                 long id = ID_COUNTER++;
-                                DATA.put(Long.valueOf(id), Note.builder().id(id).title(title).content("content of " + title).build());
+                                DATA.put(id, Note.builder().id(id).title(title).content("content of " + title).build());
                             }
                     );
         }

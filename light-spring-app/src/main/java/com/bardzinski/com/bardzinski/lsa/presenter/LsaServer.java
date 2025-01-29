@@ -42,6 +42,7 @@ public class LsaServer {
 
     private static void readLine() {
         try {
+            //noinspection ResultOfMethodCallIgnored
             System.in.read();
         } catch (Exception e) {
         }
