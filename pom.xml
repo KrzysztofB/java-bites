@@ -39,10 +39,10 @@
       <plugin>
         			 	
         <artifactId>maven-compiler-plugin</artifactId>
-        			 	
         <version>3.13.0</version>
         <configuration>
           <release>23</release>
+          <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
       		
@@ -51,12 +51,6 @@
   </build>
   	
   <dependencies>
-
-<!--    <dependency>-->
-<!--      <groupId>org.slf4j</groupId>-->
-<!--      <artifactId>slf4j-api</artifactId>-->
-<!--      <version>2.0.16</version>-->
-<!--    </dependency>-->
 
     <dependency>
       <groupId>ch.qos.logback</groupId>
@@ -88,6 +82,7 @@
   <modules>
     <module>adventofcode</module>
     <module>exercise</module>
+    <module>light-spring-app</module>
   </modules>
 
 </project>

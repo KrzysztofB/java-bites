@@ -1,0 +1,11 @@
+
+
+### get all notes
+# curl -i -H "accept: application/json" http://localhost:8080/notes
+
+
+### get note
+# curl -i -H "Accept: application/json" http://localhost:8080/notes/2
+
+### create note
+curl -i -X POST http://localhost:8080/notes -H "Content-Type: application/json" -d '{  "title":"post4", "content": "some content 4 }'
